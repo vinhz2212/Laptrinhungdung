@@ -1,0 +1,105 @@
+//Bai1//
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bai1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Nhap ho va ten: ");
+            string fullName = Console.ReadLine();
+
+            Console.WriteLine("Nhap tuoi: ");
+            int age = System.Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Nhap diem trung binh: ");
+            float avgMark = System.Single.Parse(Console.ReadLine());
+            Console.WriteLine("============================");
+            Console.WriteLine("Hello " + fullName);
+            Console.WriteLine("I am " + age);
+            Console.WriteLine("My avg mark is " + avgMark);
+        }
+    }
+}
+//Bai2//
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bai2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Nhap so nguyen a: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Nhap so nguyen b: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            int tong = a + b;
+            int hieu = a - b;
+            int tich = a * b;
+
+            Console.WriteLine($"tong {a} + {b} = {tong}");
+            Console.WriteLine($"hieu {a} - {b} = {hieu}");
+            Console.WriteLine($"tich {a} * {b} = {tich}");
+
+            if (b != 0)
+            {
+                float thuong = (float)a / b;
+                int du = a % b;
+                Console.WriteLine($"thuong {a} / {b} = {thuong}");
+                Console.WriteLine($"phan du {a} / {b} = {du}");
+            }
+            else
+            {
+                Console.WriteLine("Ko thuc hien duoc phep chia va phep lay du");
+            }
+        }
+    }
+}
+//Bai3//
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bai3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Nhap 4 so nguyen, cach nhau boi dau cach:");
+            int[] number = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+            if (number.Length != 4)
+            {
+                Console.WriteLine("Vui long nhap 4 so nguyen.");
+                return;
+            }
+
+            if (number.Distinct().Count() == 1)
+            {
+                Console.WriteLine("Khong co so nho nhat");
+            }
+
+            else
+            {
+                Console.WriteLine("Gia tri nho nhat la: " + number.Min());
+            }
+
+        }
+    }
+}
+
+//Bai4//
